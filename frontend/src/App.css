@@ -290,6 +290,7 @@ nav {
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   align-items: center;
+  margin-top: 100px;
 }
 
 .deals__image {
