@@ -1,9 +1,10 @@
 
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import RatingStars from '../../components/RatingStars'
 
 const ProductCards = ({products}) => {
-  console.log(products)
+
   return (
     <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mx-[50px]'>
       {
@@ -20,6 +21,13 @@ const ProductCards = ({products}) => {
                 </button>
               </div>
             </div>
+            {/* product description */}
+                    <div className='product__card__content'>
+                        <h4>{product.name}</h4>
+                        <p>${product.price} {product?.oldPrice ? <s>${product?.oldPrice}</s> : null}</p>
+                        <RatingStars rating={product.rating}/>
+                    </div>
+
           </div>
         ))
       }
