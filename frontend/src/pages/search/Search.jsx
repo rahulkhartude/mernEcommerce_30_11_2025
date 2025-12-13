@@ -22,7 +22,7 @@ const Search = () => {
             </section>
 
             <section className='section__container'>
-                <div className='w-full mb-12 flex flex-col md:flex-row items-center justify-center gap-4'>
+                <div className='w-full mb-12 flex flex-col md:flex-row items-center justify-center gap-4 !mb-8'>
                     <input type="text" 
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
