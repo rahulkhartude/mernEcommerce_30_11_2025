@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link, useParams } from 'react-router'
+import RatingStars from '../../../components/RatingStars';
 
 const SingleProduct = () => {
     const {id} = useParams();
@@ -15,7 +16,40 @@ const SingleProduct = () => {
                 <i class="ri-arrow-right-wide-fill"></i>
                 <span className='hover:bg-red-500'>product Name</span>
                  </div>
+
      </section>
+
+    <section className='section__container mt-8'>
+      <div className='flex flex-col items-center md:flex-row gap-8'>
+          <div className='md:w-1/2 w-full'>
+             <img className='rounded-md w-full h-auto' src='https://images.unsplash.com/photo-1512201078372-9c6b2a0d528a?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' >
+               
+             </img>
+          </div>
+      
+
+      <div className='md:w-1/2 w-full'>
+         <h3 className='text-2xl font-semibold mb-4'>Product Name</h3>
+         <p className='text-xl text-primary mb-4'> $100 <s>$130</s></p>
+         <p className='text-grey-400 mb-4'>This is an product description</p>
+      
+
+      <div>
+        <p><strong>Color:</strong>beige</p>
+        <div className='flex gap-1 items-center'>
+          <strong>Rating:</strong>
+          <RatingStars  rating={'4'} />
+        </div>
+      </div>
+      </div>
+      </div>
+
+    </section>
+
+     {/* display Reviews */} 
+            {/* <section className='section__container mt-8'>
+                <ReviewsCard productReviews = {productReviews}/>
+            </section> */}
     
 
 
