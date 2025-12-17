@@ -3,11 +3,12 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 import RatingStars from '../../components/RatingStars'
 import { useDispatch } from 'react-redux';
+import {addTocart} from '../../redux/features/cart/cartSlice'
 
 const ProductCards = ({products}) => {
   const dispatch = useDispatch();
   const handleAddToCart = (product)=>{
-    dispatch(addToCart(product));
+    dispatch(addTocart(product));
 
   }
 
